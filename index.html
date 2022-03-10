@@ -10,28 +10,37 @@
 
   <link rel="stylesheet" href="style.css">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <script src="script.js" defer></script>
+
+  <!-- Feel free to remove these styles or customize in your own stylesheet 👍 -->
 </head>
 <body>
-  <header>
-    <div id="logoSection"><img src="images/logo.svg" alt="logo"></div>
-  </header>
-  <div id="heroImageSection">
-    <img src="images/hero-desktop.jpg" alt="hero" id="heroImageDesktop">
-    <img src="images/hero-mobile.jpg" alt="hero" id="heroImageMobile">
+
+  <div id="main-wrapper">
+    <header><img src="images/logo.svg" alt="logo"></header>
+    
+    <picture>
+      <source media="(max-width: 799px)" srcset="./images/hero-mobile.jpg">
+      <source media="(min-width: 800px)" srcset="./images/hero-desktop.jpg">
+      <img src="./images/hero-desktop.jpg" alt="female model" id="hero-image">
+    </picture>
+  
+    <main id="main-content">
+      <div id="content-wrapper">
+        <h1><span>WE'RE</span> COMING SOON</h1>
+        <form action="">
+          <label for="email">Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</label>
+          <div class="input-wrapper">
+            <input required name= 'email'type="email" autocomplete="false" id="email-input" placeholder="Email Address">
+            <img src="images/icon-error.svg" alt="error icon" id="error-icon">
+            <button class="btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="20"><path fill="none" stroke="#FFF" stroke-width="2" d="M1 1l8.836 8.836L1 18.671"/></svg>
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
   </div>
-  <main>
-    <div id="mainContent">
-      <h1><span>WE'RE</span> COMING SOON</h1>
-      <p>Hello fellow shoppers! We're currently building our new fashion store. 
-        Add your email below to stay up-to-date with announcements and our launch deals.</p>
-        <div id="callToActionSection">
-          <form action="">
-            <input type="email" placeholder="Email Address" id="emailInput">
-            <button id="submitButton"><img src="images/icon-arrow.svg" alt="arrow icon"></button>
-          </form>
-        </div>
-    </div>
-  </main>
+
 </body>
 </html>
