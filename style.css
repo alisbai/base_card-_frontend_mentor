@@ -25,6 +25,7 @@ html {
 
 body {
     min-height: 100vh;
+    background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
 }
 
 #main-wrapper {
@@ -35,6 +36,7 @@ body {
 
 header {
     padding: 1.5rem;
+    background-color: white;
 }
 
 #hero-image {
@@ -43,10 +45,9 @@ header {
 
 #main-content {
     height: 100%;
-    margin-top: 3.5rem;
+    margin-top: 20%;
     padding: 0 1.5rem ;
     text-align: center;
-    background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
 }
 h1 {
     font-size: 2.5rem;
@@ -92,6 +93,10 @@ form label {
     border: 2px var(--softRed) solid !important;
 }
 
+form {
+    position: relative;
+}
+
 #error-icon {
     position: absolute;
     bottom:1rem;
@@ -122,9 +127,11 @@ form label {
 }
 
 #email-warning {
+    position: absolute;
+    left: 2rem;
+    bottom: -1rem;
     color: var(--softRed);
     font-size: 0.8rem;
-    padding-left: 2rem;
     opacity: 0;
 }
 
@@ -134,7 +141,9 @@ form label {
 
 @media (min-width: 800px) {
     body {
-        background: url(images/bg-pattern-desktop.svg)
+    background-image: url(images/bg-pattern-desktop.svg);
+    background-position: center;
+    background-size: cover;
     }
     #main-wrapper {
         grid-template-columns: 1fr min-content;
@@ -150,12 +159,12 @@ form label {
     }
 
     #main-wrapper {
-        padding-left: 6rem;
+        padding-left: 6%;
     }
     #main-content {
         background: none;
         text-align: left;
-        padding-right: 30%;
+        padding-right: 25%;
         height: auto;
         margin-top: 4rem;
     }
@@ -170,6 +179,7 @@ form label {
     header {
         display: flex;
         align-items: center;
+        background-color: transparent;
     }
 
     #hero-image {
@@ -192,6 +202,7 @@ form label {
     .btn:hover {
         width: 3.3rem;
     }
+    
 }
 
 
