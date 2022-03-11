@@ -62,14 +62,20 @@ h1 span {
 
 form label {
     color: var(--desRed);
+    line-height: 1.2;
 }
-
+/* this snippet is copied from w3schools.org */
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--desRed);
+    opacity: 1; /* Firefox */
+  }
 
 .input-wrapper {
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
     position: relative;
+    margin-bottom: 0.1rem;
 }
 
 #email-input {
@@ -115,9 +121,23 @@ form label {
     filter: brightness(1.1);
 }
 
+#email-warning {
+    color: var(--softRed);
+    font-size: 0.8rem;
+    padding-left: 2rem;
+    opacity: 0;
+}
+
+.display-warning {
+    opacity: 1 !important;
+}
+
 @media (min-width: 800px) {
+    body {
+        background: url(images/bg-pattern-desktop.svg)
+    }
     #main-wrapper {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr min-content;
         grid-template-rows: 9rem 1fr;
     }
 
@@ -131,11 +151,11 @@ form label {
 
     #main-wrapper {
         padding-left: 6rem;
-        grid-area: 1/2/2/3;
     }
     #main-content {
+        background: none;
         text-align: left;
-        padding-right: 5rem;
+        padding-right: 30%;
         height: auto;
         margin-top: 4rem;
     }
@@ -165,6 +185,7 @@ form label {
     }
 
     .btn {
+        width: 5rem;
         transition: width 0.5s;
     }
 
